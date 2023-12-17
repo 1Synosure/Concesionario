@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+    <div class = "formulario">
+        <h1>Inicio de sesión</h1>
+        <form method="post">
+            <div class = "username">
+                <label>Nombre de usuario</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="username">
+                <label>Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="recordar">
+                ¿Olvidó su contraseña?
+            </div>
+            <button type="submit" onclick="redirectToHome()">Iniciar Sesión</button>
+            <div class="registrarse">
+                Quiero <a href="#">registrarme</a>
+            </div>
+            
+        </form>
+        <script>
+            function redirectToHome(){
+                window.location.href = "imprint.html";
+            }
+        </script>
+    </div>
+    
+</body>
+</html>
