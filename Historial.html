@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Historial de Ventas</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+      </head>
+<body>
+    <h1>Historial de ventas</h1>
+    <div id="data-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Función para obtener y mostrar datos desde la base de datos
+        async function mostrarDatos() {
+            try {
+                // Realizar una solicitud HTTP GET a la API que proporciona los datos (ajustar la URL según tu caso)
+                const response = await axios.get('URL_DE_TU_API');
+                const data = response.data;
+
+                const dataContainer = document.getElementById('data-container');
+
+                if (data.length > 0) {
+                    // Crear una tabla para mostrar los datos
+                    const table = document.createElement('table');
+                    table.innerHTML = `
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                            <!-- Añadir más encabezados según la estructura de tus datos -->
+                        </tr>
+                    `;
+
+                    // Llenar la tabla con los datos
+                    data.forEach(row => {
+                        const tableRow = table.insertRow();
+                        tableRow.innerHTML = `
+                            <td>${row.columna1}</td>
+                            <td>${row.columna2}</td>
+                            <!-- Añadir más celdas según la estructura de tus datos -->
+                        `;
+                    });
+
+                    dataContainer.appendChild(table);
+                } else {
+                    dataContainer.innerHTML = '<p>No hay datos disponibles.</p>';
+                }
+            } catch (error) {
+                console.error('Error al obtener datos:', error);
+            }
+        }
+
+        // Llamar a la función para mostrar datos al cargar la página
+        mostrarDatos();
+    </script>
+</body>
+</html>
