@@ -121,6 +121,11 @@
             <option value="Arriendo">Arriendo</option>
             <option value="Reserva">Reserva</option>
         </select>
+        <label for="Marca">Marca del vehículo:</label>
+        <input type="text" id="Marca" name="Marca" required>
+        
+        <label for="Modelo">Modelo del vehículo:</label>
+        <input type="text" id="Modelo" name="Modelo" required>
         
         <button type="submit">Enviar Formulario</button>
     </form>
@@ -144,6 +149,35 @@
         });
     </script>
     <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            // Obtener parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('autoId');
+
+            // Llenar los campos del formulario
+            document.getElementById('Marca').value = "marca " + id;
+            document.getElementById('Modelo').value = "modelo " + id;
+        });
+            // Backend con Node.js y Express
+            /*
+            const express = require('express');
+            const app = express();
+            const port = 3000;
+
+            app.get('/formulario', (req, res) => {
+                // Consultar la base de datos y obtener la información
+                const marca = obtenerMarcaDesdeBaseDeDatos(); // Implementa esta función
+                const modelo = obtenerModeloDesdeBaseDeDatos(); // Implementa esta función
+
+                // Enviar la información al frontend
+                res.sendFile(__dirname + '/formulario.html');
+            });
+
+            app.listen(port, () => {
+                console.log(`El servidor está escuchando en http://localhost:${port}`);
+    });
+  */
+    // Agrega más campos según sea necesario
         $(function () {
     // ...
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrendar</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tienda</h1>
+        <div class="container-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke-width="1.5" 
+                stroke="currentColor" 
+                class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+              </svg>
+        </div>
+    </header>
+
+    <div class="cointainer-items">
+        <div class="item">
+            <figure>
+                <img src="https://www.megautos.com/wp-content/uploads/2023/04/Chevrolet-Tracker-RS-dinamica.jpg" alt="chevrolet">
+            </figure>
+            <div class="info product">
+                <h2>Chevrolet Tracker</h2>
+                <p class="price">$40.000</p>
+                <button onclick = "arrendarAuto(1)">Arrendar</button>
+        </form>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/2XHXRCPEQZETBCQZPKL55JGVDM.jpg" alt="Kia
+                ">
+            </figure>
+            <div class="info product">
+                <h2>Kia Niro</h2>
+                <p class="price">$40.000</p>
+                <button onclick = "arrendarAuto(2)">Arrendar</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://static.emol.cl/emol50/Fotos/2016/11/08/file_20161108111455.jpg" alt="Volkswagen">
+            </figure>
+            <div class="info product">
+                <h2>Volkswagen Beetle </h2>
+                <p class="price">$40.000</p>
+                <button onclick = "arrendarAuto(3)">Arrendar</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://motortudo.com/wp-content/uploads/2023/04/Audi-A3-Sedan-2023.webp" alt="Audi">
+            </figure>
+            <div class="info product">
+                <h2>Audi A3</h2>
+                <p class="price">$40.000</p>
+                <button onclick = "arrendarAuto(4)">Arrendar</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://mundotuerca.cl/wp-content/uploads/2023/06/que-tan-bueno-es-el-hyundai-tucson.jpg" alt="Hyundai">
+            </figure>
+            <div class="info product">
+                <h2>Hyundai Tucson</h2>
+                <p class="price">$40.000</p>
+                <button onclick = "arrendarAuto(5)">Arrendar</button>
+            </div>
+        </div>
+        <script>
+            function arrendarAuto(autoId){
+                window.location.href = 'FormArriendo.html?autoId=' + autoId;
+            }
+        </script>
+</body>
+</html>
