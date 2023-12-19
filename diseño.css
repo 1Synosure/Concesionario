@@ -11,7 +11,7 @@ body{
     margin: 0 auto;
     max-width: 1200px;
     font-family: 'lato';
-    color: #333;
+    background: linear-gradient(245.59deg, #2e2e2e59 0%, #383838 28.53%, #22245a 75.52%);
 }
 
 .icon-cart{
@@ -28,6 +28,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 30px 0 40px 0;
+    color: white;
 }
 
 /* Main */
@@ -35,10 +36,12 @@ header{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    color: white;
 }
 
 .item{
     border-radius: 10px;
+    margin-top: 30px;
 }
 
 .item:hover{
@@ -55,6 +58,7 @@ header{
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     transition: all .9s;
+    margin-bottom: 5px;
 }
 .item figure{
     overflow: hidden;
@@ -62,4 +66,15 @@ header{
 
 .item:hover img{
     transform: scale(1.2);
+}
+h2{
+    padding-top: 10px;
+}
+p{
+    padding-top: 10px;
+}
+button{
+    margin-top: 10px;
+    background-color: #383838;
+    color: white;
 }
