@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,57 +43,3 @@
     
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-</head>
-<body>
-
-    <div class="login-form">
-        <h2>Iniciar Sesión</h2>
-        <form id="loginForm">
-            <div class="username">
-                <label>Nombre de usuario</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="username">
-                <label>Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="button" onclick="login()">Iniciar Sesión</button>
-        </form>
-        <div id="result"></div>
-    </div>
-
-    <script>
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Crear un objeto FormData para enviar datos al servidor
-            const formData = new FormData();
-            formData.append('username', username);
-            formData.append('password', password);
-
-            // Realizar una solicitud Fetch al servidor
-            fetch('/login', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Mostrar el resultado en el elemento con id 'result'
-                document.getElementById('result').innerText = data;
-            })
-            .catch(error => console.error('Error:', error));
-        }
-    </script>
-
-</body>
-</html>
->>>>>>> Stashed changes

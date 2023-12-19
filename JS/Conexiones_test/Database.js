@@ -3,9 +3,11 @@ const mysql = require('mysql');
 
 // Configura la conexión a la base de datos
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
-  database: 'concesionario'
+  database: 'Consesionario',
+  password: 'root',
+  protocol:'tcp'
 });
 //Tabla cliente
 const createDatabaseAndTableScript = `  
@@ -31,9 +33,7 @@ CREATE TABLE IF NOT EXISTS boleta (
     Precio_de_venta DECIMAL(10, 2),
     Fecha_de_compra DATE,
     Garantia VARCHAR(255),
-    Detalles_de_pago TEXT,
-    FOREIGN KEY (Rut_cliente) REFERENCES cliente(Rut),
-    FOREIGN KEY (Id_auto) REFERENCES auto(Id)  -- Asegúrate de tener una tabla 'auto' con una columna 'Id'
+    Detalles_de_pago TEXT
 );
 `;
 
@@ -140,3 +140,6 @@ connection.query(createTrabajadorTableScript, (error) => {
     // Cierra la conexión después de ejecutar la consulta
     connection.end();
 });
+
+
+

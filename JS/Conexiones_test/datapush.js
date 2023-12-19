@@ -3,9 +3,11 @@ const mysql = require('mysql');
 
 // Configura la conexión a la base de datos
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
-  database: 'concesionario'
+  database: 'Consesionario',
+  password: 'root',
+  protocol:'tcp'
 });
 
 // Conéctate a la base de datos
