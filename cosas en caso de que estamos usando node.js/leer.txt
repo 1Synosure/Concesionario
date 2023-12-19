@@ -1,4 +1,0 @@
-cabros, no sabia que base de datos
-o que tipo  de server usabamos
-asi que intente hacer esto para conectarnos a un nodejs
-y si no estamos usando nodejs nada de esto sirve uwu
