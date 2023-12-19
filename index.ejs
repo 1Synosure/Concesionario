@@ -1,0 +1,40 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Clientes</title>
+</head>
+<body>
+    <h1>Tabla de Clientes</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Rut</th>
+                <th>Nombre</th>
+                <th>Historial de compra</th>
+                <th>Número de teléfono</th>
+                <th>Dirección</th>
+                <th>Correo electrónico</th>
+                <th>Autos arrendados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% clienteData.forEach(cliente => { %>
+                <tr>
+                    <td><%= cliente.Rut %></td>
+                    <td><%= cliente.Nombre %></td>
+                    <td><%= cliente.Historial_de_compra %></td>
+                    <td><%= cliente.Numero_de_telefono %></td>
+                    <td><%= cliente.Direccion %></td>
+                    <td><%= cliente.Correo_electronico %></td>
+                    <td><%= cliente.Autos_arrendados %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
