@@ -4,34 +4,45 @@
     <!-- Agrega las metaetiquetas necesarias y los enlaces de estilo según tus necesidades -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="PageStyle.css">
     <title>Cancelar Arriendo</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
+        body{
+            margin-bottom: 35%;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
     <h2>Cancelar Arriendo</h2>
+    <main>
+        <div>
+            <form id="buscarForm">
+                <label>Buscar por:</label>
+                <select id="buscarPor" name="buscarPor">
+                    <option value="numeroOrden">Número de Orden</option>
+                    <option value="rutCliente">RUT del Cliente</option>
+                </select>
+        
+                <label id="labelNumeroOrden" style="display:none;" for="buscarNumeroOrden">Número de Orden:</label>
+                <input type="text" id="buscarNumeroOrden" name="buscarNumeroOrden">
+        
+                <label id="labelRutCliente" style="display:none;" for="buscarRutCliente">RUT del Cliente:</label>
+                <input type="text" id="buscarRutCliente" name="buscarRutCliente">
+        
+                <button type="button" onclick="buscarArriendo()">Buscar Arriendo</button>
+            </form>
+        </div>
+        </main>
+            <div id="resultadoArriendo">
+                <!-- Aquí se mostrará el resultado de la búsqueda -->
+            </div>
+       
+  
+   
 
-    <form id="buscarForm">
-        <label>Buscar por:</label>
-        <select id="buscarPor" name="buscarPor">
-            <option value="numeroOrden">Número de Orden</option>
-            <option value="rutCliente">RUT del Cliente</option>
-        </select>
-
-        <label id="labelNumeroOrden" style="display:none;" for="buscarNumeroOrden">Número de Orden:</label>
-        <input type="text" id="buscarNumeroOrden" name="buscarNumeroOrden">
-
-        <label id="labelRutCliente" style="display:none;" for="buscarRutCliente">RUT del Cliente:</label>
-        <input type="text" id="buscarRutCliente" name="buscarRutCliente">
-
-        <button type="button" onclick="buscarArriendo()">Buscar Arriendo</button>
-    </form>
-
-    <div id="resultadoArriendo">
-        <!-- Aquí se mostrará el resultado de la búsqueda -->
-    </div>
 
     <script>
         function buscarArriendo() {
@@ -143,5 +154,5 @@ function mostrarInformacionArriendo(datosGuardados) {
             }
         });
     </script>
-</body>
+    </body>
 </html>

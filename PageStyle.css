@@ -1,4 +1,5 @@
-
+*::after,
+*::before,
 *{
     padding: 0;
     margin: 0;
@@ -23,11 +24,12 @@ body{
     background: linear-gradient(245.59deg, #2e2e2e59 0%, #383838 28.53%, #22245a 75.52%);
     font-family: 'Poppins', sans-serif;
     position: relative;
-    margin-bottom: 100px;
+    margin: auto;
 }
 form {
     max-width: 600px;
     margin: 0 auto;
+    
 }
 
 label {
@@ -64,8 +66,12 @@ button:hover {
 
 h2{
     padding-bottom: 20px;
+    margin: 10px 0 15px 20px;
     color: white;
     align-self: center;
     font-family: 'Poppins', sans-serif;;
 
+}
+script{
+    color: white;
 }
