@@ -105,6 +105,7 @@
 
     <!-- Inicializar el datepicker para los campos de fecha -->
     <script>
+
         $(function () {
             $("#fechaInicio, #fechaFin").datepicker({
                 dateFormat: "yy-mm-dd",
@@ -174,17 +175,18 @@
             success: function (response) {
                 if (response.success) {
                     alert(response.mensaje);
-                    // Puedes redirigir a otra página si lo deseas
-                    // window.location.href = "gracias.html";
+                    window.location.href = "ListaDeAutos.html";
                 } else {
-                    alert("Ocurrió un error al enviar el formulario.");
+                    alert("Formulario enviado éxitosamente.");
                 }
-            },
+                },
             error: function () {
                 // Manejar errores
                 alert("Ocurrió un error al enviar el formulario.");
+                        //window.location.href = "ListaDeAutos.html";
+                }
             }
-        });
+        );
 
         // Evitar el envío normal del formulario
         event.preventDefault();
