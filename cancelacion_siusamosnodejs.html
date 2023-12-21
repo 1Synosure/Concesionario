@@ -73,11 +73,13 @@
             } else {
                 // Mostrar mensaje de error
                 $("#resultadoArriendo").html("<p>" + response.error + "</p>");
+                window.location.href = "imprint.html";
             }
         },
         error: function () {
             // Manejar errores
             $("#resultadoArriendo").html("<p>Ocurrió un error al buscar el arriendo.</p>");
+            window.location.href = "imprint.html";
         }
     });
 }
